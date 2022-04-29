@@ -1,6 +1,9 @@
 import System.IO
 
 openFile :: FilePath -> IOMode -> IO Handle
+readFile :: FilePath -> String -> IO()
+writeFile :: FilePath -> String -> IO()
+appendFile :: FilePath -> String -> IO()
 
 main :: IO()
 main = do
@@ -9,7 +12,8 @@ main = do
     firstLine <- if not hasLine
                  then hGetLine helloFile
                  else return "empty"
-    hasSecondLine <- hIsEOF helloFile
+    putStrLn "Done!"
+                 hasSecondLine <- hIsEOF helloFile
     secondLine <- if not hasSecondLine
                   then hGetLine helloFile
                   else return " "
