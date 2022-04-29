@@ -5,18 +5,18 @@ readFile :: FilePath -> String -> IO()
 writeFile :: FilePath -> String -> IO()
 appendFile :: FilePath -> String -> IO()
 
-main :: IO()
-main = do
-    helloFile <- openFile "hello.txt" ReadMode
-    hasLine <- hIsEOF helloFile
-    firstLine <- if not hasLine
-                 then hGetLine helloFile
-                 else return "empty"
-    putStrLn "Done!"
-                 hasSecondLine <- hIsEOF helloFile
-    secondLine <- if not hasSecondLine
-                  then hGetLine helloFile
-                  else return " "
+-- main :: IO()
+-- main = do
+--     helloFile <- openFile "hello.txt" ReadMode
+--     hasLine <- hIsEOF helloFile
+--     firstLine <- if not hasLine
+--                  then hGetLine helloFile
+--                  else return "empty"
+--     putStrLn "Done!"
+--                  hasSecondLine <- hIsEOF helloFile
+--     secondLine <- if not hasSecondLine
+--                   then hGetLine helloFile
+--                   else return " "
 
 
 -- Initial version --
